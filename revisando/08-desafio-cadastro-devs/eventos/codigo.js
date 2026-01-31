@@ -11,3 +11,47 @@ Construa uma página web que permita cadastrar desenvolvedores, suas tecnologias
 
 Para esse exercício você deve utilizar apenas eventos adicionados via javascript e a página deve funcionar sem acionar um recarregamento.*/
 
+function createLabel(text,htmlFor){
+    const label = document.createElement('label')
+    label.htmlFor = htmlFor;
+    label.innerText = text;
+    return label
+}
+
+function createInput(id, value, name, type ="text", placehoder = ''){
+    const input = document.createElement('input')
+    input.id = id;
+    input.value = value;
+    input.name = name;
+    input.type = type;
+    input.placeholder = placehoder;
+    return input
+
+}
+
+
+
+const addTechbtn = document.getElementById('addTechBtn')
+const form = document.getElementById('devForm')
+const developes = []
+let inputRows = 0
+
+
+addTechbtn.addEventListener('click', function(ev){
+    const stackInput = document.getElementById('stackInputs')
+
+    const newRow = document.createElement('li')
+    const rowIndex = inputRows
+    inputRows ++
+    newRow.id = 'inputRows-' + rowIndex
+    newRow.className = 'inputRow'
+
+    const tecNameLabel = createLabel('Nome: ', 'techName-' + rowIndex )
+    const tecNameInput = createInput('techName-' + rowIndex , null, 'techName')
+
+    newRow.append(tecNameLabel, tecNameInput)
+
+    stackInput.appendChild(newRow)
+
+})
+
