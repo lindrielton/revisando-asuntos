@@ -49,9 +49,41 @@ addTechbtn.addEventListener('click', function(ev){
     const tecNameLabel = createLabel('Nome: ', 'techName-' + rowIndex )
     const tecNameInput = createInput('techName-' + rowIndex , null, 'techName')
 
-    newRow.append(tecNameLabel, tecNameInput)
+    const expLabel = createLabel('Experiência: ', )
+
+    const id1 = 'tecName' + rowIndex + '.1'
+    const expRadio1 = createInput(id1, '0-2 anos', 'techExp-' + rowIndex, 'radio')
+    const expLabel1 = createLabel('0-2 Anos : ', id1 )
+
+    const id2 = 'tecName' + rowIndex + '.2'
+    const expRadio2 = createInput(id2, '3-4 anos', 'techExp-' + rowIndex, 'radio')
+    const expLabel2 = createLabel('3-4 Anos : ', id2 )
+
+    const id3 = 'tecName' + rowIndex + '.3'
+    const expRadio3 = createInput(id3, '5 ou + anos', 'techExp-' + rowIndex, 'radio')
+    const expLabel3 = createLabel('5+ Anos : ', id3 )
+
+
+    const removeRowBtn = document.createElement('button')
+    removeRowBtn.type = 'button'
+    removeRowBtn.innerText = 'Remover'
+    removeRowBtn.addEventListener('click', function(){
+        stackInput.removeChild(newRow)
+    })
+
+    newRow.append(tecNameLabel, tecNameInput, expLabel ,  expRadio1, expLabel1 , expRadio2, expLabel2, expRadio3, expLabel3, removeRowBtn)
 
     stackInput.appendChild(newRow)
 
 })
 
+
+
+form.addEventListener('submit', function(ev){
+    ev.preventDefault()
+
+    const fullnameInput = document.getElementById('fullname')
+    const inputRows = document.querySelectorAll('.inputRow')
+
+    let tecHnologies = []
+})
