@@ -38,6 +38,7 @@ let inputRows = 0
 
 
 addTechbtn.addEventListener('click', function(ev){
+    ev.preventDefault()
     const stackInput = document.getElementById('stackInputs')
 
     const newRow = document.createElement('li')
@@ -86,4 +87,23 @@ form.addEventListener('submit', function(ev){
     const inputRows = document.querySelectorAll('.inputRow')
 
     let tecHnologies = []
+    inputRows.forEach(function(row){
+        const techName = document.querySelector('#' + row.id + ' input[name="techName"]').value
+        const techExp = document.querySelector('#' + row.id + ' input[type="radio"]:checked').value
+        tecHnologies.push({name: techName, exp: techExp})
+    })
+    const newDev = {fullname : fullnameInput.value, tecnologi: tecHnologies}
+      developes.push(newDev)
+      alert('deve cadastrado')
+
+      fullnameInput.value = ''
+      inputRows.forEach(function (row){
+      row.remove()
+   })
+
+   console.log(developes)
 })
+
+
+
+
