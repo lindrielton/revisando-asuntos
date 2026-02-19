@@ -10,14 +10,12 @@ main{
 }
 
 section{
-    
-    padding: 2rem;
     margin: 10rem;
     display: grid;
     align-items: center;
     justify-content:center;
     grid-template-columns: repeat(3,1fr) ;
-    
+     
 }
 
 #gamer1,#gamer2{
@@ -40,56 +38,77 @@ section{
 
 #updatedPlayer{
     display: block;
-    padding: 3rem;
+    padding: 1rem;
 }
 
 
 
 .tic{
-    padding: 3rem;
-   background-color: transparent;
-   border-width: .1rem;
-   
+    padding: 5rem;
+    background-color: transparent; 
 }
 
 #btn1{
     border-top: none;
     border-left: none;
     border-color: lightslategray;
+     
+    
+
 }
 #btn2{
     border-top: none;
     border-color: lightslategray;
+     
+    
+    
     
 }
 #btn3{
     border-top: none;
     border-right: none;
     border-color: lightslategray;
+     
+    
+
 }
 #btn4{
    
     border-left: none;
     border-color: lightslategray, .1rem;
+    
+    
+    
 }
 #btn6{
     border-color: lightslategray;
     border-right: none;
+     
+    
+
 }
 #btn7{
     border-bottom: none;
     border-left: none;
     border-color: lightslategray;
+     
+    
+    
 }
 #btn8{
     border-bottom: none;
     border-color: lightslategray;
+     
+    
+    
    
 }
 #btn9{
     border-bottom: none;
     border-right: none;
     border-color: lightslategray;
+    
+    
 }
 
 

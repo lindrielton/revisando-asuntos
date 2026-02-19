@@ -5,10 +5,13 @@
 - Deve ser possível incluir os nomes dos dois jogadores;
 - O nome do jogador da vez deve ser mostrado na tela e alterado a medida que os turnos vão se alternando;
 - Um tabuleiro deve ser mostrado na tela e ser atualizado quando o jogador clicar na região que ele quer marcar;
-- Quando um jogador clicar no tabuleiro deve ser marcado um “X” ou “O” de acordo com o jogador da vez e não deve ser possível clicar naquela região novamente;
+- Quando um jogador clicar no tabuleiro deve ser marcado um “X” ou “O” de acordo com o jogador da vez e não deve 
+ser possível clicar naquela região novamente;
 - Quando um jogador ganhar seu nome deve ser mostrado na tela e as regiões da vitória devem ser destacadas de alguma forma;
 - Em caso de empate, uma mensagem de empate deve ser mostrada na tela;
 - Deve ser possível reiniciar o jogo para jogar novamente.*/
+
+
 
 
 const gamer1 = document.getElementById('gamer1')
@@ -19,12 +22,12 @@ let updatePlayer = document.getElementById('updatedPlayer')
 
 const elementoPai = document.getElementById('elementPai')
 
-const x = document.querySelector('#x')
-const o = document.querySelector('#o')
+const elementx = document.querySelector('#x').textContent
+const elemento = document.querySelector('#o').textContent
 
 const areaGame = document.querySelectorAll('.tic')
 
-
+let button = document.getElementsByTagName('button')
 
  
 let gameratualizad = gamer1.value
@@ -42,9 +45,30 @@ areaGame.forEach(function(list){
      updatePlayer.innerText = 'Jogador: ' + gameratualizad
 
   })
-   
 
-  
+})
+
+
+let jogadorAtual = 'o'
+let p = document.createElement('p')
+p.innerText = 'O'
+
+areaGame.forEach(function(btn){
+      btn.addEventListener('click', function(ev){
+        ev.preventDefault()
+        if(btn.innerText !== '')return
+
+        if(p.innerText == 'O'){
+          p.innerText =  'X'
+        }else{
+          p.innerText = 'O'
+        }
+          
+          btn.innerText = p.innerText
+          
+      })
+
+    
 })
 
 
