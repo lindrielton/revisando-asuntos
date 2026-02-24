@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    text-align: center;
+    margin-top: 5rem;
+    background-color:#191C1F ;
+    color: aliceblue;
+}
+
+button{
+    background-color: #009D43;
+    padding: .1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: .5rem;
+    
+}
+
+input{
+    margin-top: 2rem;
+    padding: .1rem;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+}
