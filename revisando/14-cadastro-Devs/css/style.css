@@ -1,0 +1,57 @@
+
+body{
+   background-color: #191C1F;
+   color:#F7F9FA ;
+}
+
+h1{
+   text-align: center;
+   margin-top: 5rem;
+}
+
+#form{
+   text-align: center;
+
+}
+
+
+#nomeDev, #btn{
+   padding: .2rem;
+   border: none;
+   cursor: pointer;
+   border-radius: .2rem;
+   outline: none;
+   
+   
+}
+
+
+#registerDev, #remove{
+   text-align: center;
+   margin-top:1rem ;
+   padding:.3rem;
+   cursor: pointer;
+   border: none;
+   transition: 1s;
+   border-radius: .2rem;
+   
+}
+
+#registerDev:hover{
+   background-color: #077738;
+   color: #F7F9FA;
+   
+}
+
+
+#remove:hover{
+    background-color: #077738;
+    color: #F7F9FA;
+}
+
+
+
+
+
+
+
