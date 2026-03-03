@@ -95,38 +95,53 @@ bunttonClic.addEventListener("click", function(ev){
    btnRemove.forEach(function(btn){
     btn.addEventListener('click', function(ev){
          let listas = ev.currentTarget.parentNode
-         listas.remove()
-       
-    })
+         listas.remove() 
+     })
     
      
    })
+
+
+})
 
 
 
     document.getElementById("registerDev").addEventListener("click", function(ev){
         ev.preventDefault()
         let nome = document.getElementById('nomeDev').value
+
+        let tecnames = []
         document.querySelectorAll('.nods').forEach(function(row){
            
             let listerMarqued =  {
-                NameDev:nome,
                 NameTecnologia:row.querySelector('input[type="text"]').value,
                 experiEncia:row.querySelector('input[type="radio"]:checked').value + 'anos'
               
             }
 
-          devs.push(listerMarqued)
+            tecnames.push(listerMarqued)
 
         })
-        console.log(devs)
+
+           let listComplet = {nomeDev: nome, tecnologias: tecnames}
+           devs.push(listComplet)
+
+           alert('deve cadastrado...')
+           console.log(devs)
+
+
+           document.getElementById('nomeDev').value = ''
+           document.querySelectorAll('.nods').forEach(function(row){
+            row.remove()
+          })
+
         
     })
 
 
     
 
-})
+
 
 
   
